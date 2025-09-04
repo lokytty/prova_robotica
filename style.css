@@ -21,11 +21,16 @@ h1, h2, h3 {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #ffa8c5a4; /* Cor de fundo rosa vibrante */
+    background-color: #e91e63; /* Cor de fundo rosa vibrante e sólida */
     color: white;
     padding: 2.5rem 0;
     text-align: center;
     border-bottom: 5px solid #d81b60; /* Borda escura para separar visualmente */
+}
+
+/* Ajuste específico para o título h1 dentro do cabeçalho, garantindo que ele seja branco */
+header h1 {
+    color: white;
 }
 
 /* Estilos para o conteúdo principal */
@@ -122,7 +127,7 @@ hr {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #e91e63;
+    background-color: #e91e63; /* Cor de fundo igual ao novo cabeçalho para consistência */
     color: white;
     text-align: center;
     padding: 1.5rem 0;
