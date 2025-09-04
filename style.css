@@ -8,7 +8,7 @@ body {
     margin: 0; /* Remove a margem padrão do navegador */
     padding: 0; /* Remove o padding padrão do navegador */
     background-color: #f4f4f4; /* Define a cor de fundo cinza claro */
-    color: #333; /* Define a cor padrão do texto */
+    color: #ff92e43a; /* Define a cor padrão do texto */
 }
 
 /* Estilos para todos os títulos (h1, h2, h3) */
@@ -19,7 +19,7 @@ h1, h2, h3 {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #00796b; /* Cor de fundo verde-azulado */
+    background-color: #ff92e43a; /* Cor de fundo verde-azulado */
     color: white; /* Cor do texto do cabeçalho */
     padding: 2rem 0; /* Espaçamento interno (topo/baixo e laterais) */
     text-align: center; /* Centraliza o texto */
