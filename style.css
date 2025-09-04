@@ -1,1 +1,148 @@
+/* Importação da fonte 'Poppins' do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Estilos globais aplicados a todo o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte principal */
+    line-height: 1.6; /* Define o espaçamento entre as linhas do texto */
+    margin: 0; /* Remove a margem padrão do navegador */
+    padding: 0; /* Remove o padding padrão do navegador */
+    background-color: #f4f4f4; /* Define a cor de fundo cinza claro */
+    color: #333; /* Define a cor padrão do texto */
+}
+
+/* Estilos para todos os títulos (h1, h2, h3) */
+h1, h2, h3 {
+    color: #004d40; /* Cor verde escuro para os títulos */
+    text-align: center; /* Centraliza o texto dos títulos */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #00796b; /* Cor de fundo verde-azulado */
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 2rem 0; /* Espaçamento interno (topo/baixo e laterais) */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    padding: 2rem; /* Espaçamento interno */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na tela */
+}
+
+/* Estilos para cada seção do site */
+section {
+    background-color: white; /* Fundo branco para as seções */
+    margin-bottom: 2rem; /* Margem na parte de baixo para separar as seções */
+    padding: 2rem; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilos para a linha horizontal */
+hr {
+    border: none; /* Remove a borda padrão */
+    border-top: 1px solid #ccc; /* Adiciona uma linha cinza no topo */
+    margin: 4rem 0; /* Espaçamento maior para separar as seções */
+}
+
+/* Estilos específicos para a Seção 1 */
+#sobre-ds .content-wrapper {
+    display: flex; /* Transforma o container em um flexbox */
+    flex-direction: column; /* Organiza os itens em coluna (padrão em mobile) */
+    gap: 2rem; /* Espaço entre os itens */
+}
+
+#sobre-ds .content-wrapper p {
+    text-align: justify; /* Alinha o texto de forma justificada */
+}
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 1rem;
+}
+
+.media-item {
+    width: 100%; /* Largura total em telas menores */
+    max-width: 600px; /* Largura máxima para imagens e vídeos */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos específicos para a Seção 2 (temas de IA) */
+.ia-container {
+    display: grid; /* Transforma o container em um grid */
+    /* Define colunas que se adaptam automaticamente ao espaço disponível */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; /* Espaço entre os cards */
+    text-align: center; /* Centraliza o texto dentro do container */
+}
+
+.ia-card {
+    background-color: #e0f2f1; /* Cor de fundo verde claro para os cards */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ia-card iframe {
+    width: 100%; /* O vídeo ocupa a largura total do card */
+    aspect-ratio: 16 / 9; /* Mantém a proporção de 16:9 para vídeos */
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Estilos para a Seção 3 (projeto futurista) */
+#futurista .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha os itens ao centro verticalmente */
+    gap: 2rem;
+}
+
+#futurista p {
+    text-align: justify;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333; /* Cor de fundo cinza escuro */
+    color: white; /* Cor do texto branca */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsividade: ajusta o layout para telas maiores (a partir de 768px) */
+@media (min-width: 768px) {
+    #sobre-ds .content-wrapper {
+        flex-direction: row; /* Altera a direção para linha (horizontal) */
+        align-items: center;
+    }
+
+    #sobre-ds p {
+        flex: 1; /* O parágrafo ocupa 1 parte do espaço disponível */
+    }
+
+    .media-container {
+        flex: 1; /* O container de mídia ocupa 1 parte do espaço disponível */
+        justify-content: flex-end; /* Alinha a mídia à direita */
+    }
+
+    #futurista .content-wrapper {
+        flex-direction: row; /* Também altera a direção para linha */
+    }
+
+    #futurista p {
+        flex: 1;
+    }
+
+    #futurista img {
+        flex: 1;
+    }
+}
 
