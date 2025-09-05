@@ -124,6 +124,16 @@ hr {
 
 #futurista p {
     text-align: justify;
+    max-width: 800px; /* Adicionado para deixar o parágrafo mais largo */
+    width: 100%; /* Garantir que a largura máxima seja aplicada */
+}
+
+#futurista img {
+    margin-top: 2rem; /* Espaço entre o parágrafo e a imagem */
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
 /* Estilos do rodapé */
@@ -152,14 +162,15 @@ footer {
     }
 
     #futurista .content-wrapper {
-        flex-direction: row;
+        flex-direction: column; /* Manter em coluna para o layout de parágrafo e imagem abaixo */
     }
 
     #futurista p {
-        flex: 1;
+        flex: auto;
+        max-width: 100%;
     }
 
     #futurista img {
-        flex: 1;
+        flex: auto;
     }
 }
