@@ -1,165 +1,329 @@
-/* Importa as fontes 'Quicksand' e 'Dancing Script' */
+/* Importa a fonte 'Quicksand' para o corpo do texto e 'Dancing Script' para os títulos */
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Dancing+Script:wght@700&display=swap');
 
-/* Estilos Globais */
+
+
+/* Estilos globais aplicados a todo o corpo da página */
+
 body {
-    font-family: 'Quicksand', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #fce4ec; /* Rosa bebê */
-    color: #4a4a4a; /* Cinza escuro para boa leitura */
-    font-size: 18px;
-    box-sizing: border-box;
+
+    font-family: 'Quicksand', sans-serif; /* Define a fonte principal fofa */
+
+    line-height: 1.6;
+
+    margin: 0;
+
+    padding: 0;
+
+    background-color: #fce4ec; /* Cor de fundo rosa bebê */
+
+    color: #4a4a4a; /* Cinza escuro para o texto, garantindo boa leitura */
+
+    font-size: 18px; /* Aumentei o tamanho da fonte aqui! */
+
 }
 
-/* Define a caixa de modelo para todos os elementos */
-*, *::before, *::after {
-    box-sizing: inherit;
-}
 
-/* Container principal para centralizar o conteúdo */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
 
-/* Estilos de Títulos */
+/* Estilos para todos os títulos (h1, h2, h3) */
+
 h1, h2, h3 {
-    font-family: 'Dancing Script', cursive;
-    color: #e91e63; /* Rosa vibrante */
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+
+    font-family: 'Dancing Script', cursive; /* Fonte cursiva para um visual único */
+
+    color: #e91e63; /* Rosa vibrante para os títulos */
+
+    text-align: center;
+
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil */
+
 }
 
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
 
-/* Estilos do Cabeçalho */
+
+/* Estilos do cabeçalho */
+
 header {
-    background-color: #e91e63;
-    color: white;
-    padding: 2.5rem 0;
-    text-align: center;
-    border-bottom: 5px solid #d81b60;
+
+    background-color: #e91e63; /* Cor de fundo rosa vibrante e sólida */
+
+    color: white;
+
+    padding: 2.5rem 0;
+
+    text-align: center;
+
+    border-bottom: 5px solid #d81b60; /* Borda escura para separar visualmente */
+
 }
+
+
+
+/* Ajuste específico para o título h1 dentro do cabeçalho, garantindo que ele seja branco */
 
 header h1 {
-    color: white;
-    margin: 0;
+
+    color: white;
+
 }
 
-/* Estilos das Seções */
-section {
-    background-color: #fff;
-    margin: 2rem auto;
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border: 2px solid #f8bbd0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+/* Estilos para o conteúdo principal */
+
+main {
+
+    padding: 2rem;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
 }
+
+
+
+/* Estilos para cada seção do site para destacar a divisão */
+
+section {
+
+    background-color: #fff; /* Fundo branco para as seções, contrastando com o rosa */
+
+    margin-bottom: 2rem;
+
+    padding: 3rem; /* Aumento do padding para dar mais espaço */
+
+    border-radius: 20px; /* Bordas bem arredondadas, estilo fofo */
+
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra mais forte para destacar a seção */
+
+    border: 2px solid #f8bbd0; /* Borda rosa suave para contornar a seção */
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
+
+}
+
+
+
+/* Efeito de hover ao passar o mouse sobre a seção */
 
 section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+
+    transform: translateY(-5px); /* Move a seção um pouco para cima */
+
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Aumenta a sombra */
+
 }
 
-/* Estilo da linha divisória */
-.divider {
-    border: none;
-    border-top: 5px dotted #e91e63;
-    width: 50%;
-    margin: 4rem auto;
+
+
+/* Estilos para a linha horizontal que divide as seções */
+
+hr {
+
+    border: none;
+
+    border-top: 5px dotted #e91e63; /* Linha pontilhada rosa, bem visível */
+
+    margin: 4rem 0;
+
 }
 
-/* Estilos para a Seção 1 (Sobre DS) */
+
+
+/* Estilos específicos para a Seção 1 */
+
 #sobre-ds .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2rem;
+
 }
 
-#sobre-ds p {
-    text-align: justify;
+
+
+#sobre-ds .content-wrapper p {
+
+    text-align: justify;
+
 }
+
+
 
 .media-container {
-    width: 100%;
-    max-width: 600px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 1rem;
+
 }
+
+
 
 .media-item {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid #f8bbd0;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    border: 2px solid #f8bbd0; /* Borda rosa para as mídias */
+
 }
 
-/* Estilos para a Seção 2 (Temas de IA) */
-#temas-ia .content-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
+
+
+/* Estilos específicos para a Seção 2 (temas de IA) */
+
+.ia-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 1.5rem;
+
+    text-align: center;
+
 }
+
+
 
 .ia-card {
-    background-color: #fff0f5; /* Rosa claro */
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid #f8bbd0;
-    text-align: center;
+
+    background-color: #fff0f5; /* Rosa mais claro para os cards de IA */
+
+    padding: 1.5rem;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    border: 2px solid #f8bbd0;
+
 }
 
-.ia-card h3 {
-    margin-top: 0;
-}
+
 
 .ia-card iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-    margin-top: 1rem;
-    border: none;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border-radius: 10px;
+
+    margin-top: 1rem;
+
 }
 
-/* Estilos para a Seção 3 (Projeto Futurista) */
+
+
+/* Estilos para a Seção 3 (projeto futurista) */
+
 #futurista .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 2rem;
+
 }
+
+
 
 #futurista p {
-    text-align: justify;
-    max-width: 800px;
-    margin: 0 auto 2rem;
+
+    text-align: justify;
+
 }
 
-#futurista img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-}
 
-/* Estilos do Rodapé */
+
+/* Estilos do rodapé */
+
 footer {
-    background-color: #e91e63;
-    color: white;
-    text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 2rem;
+
+    background-color: #e91e63; /* Cor de fundo igual ao novo cabeçalho para consistência */
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1.5rem 0;
+
+    margin-top: 2rem;
+
 }
 
-/* Responsividade para telas maiores */
+
+
+/* Responsividade: ajusta o layout para telas maiores (a partir de 768px) */
+
 @media (min-width: 768px) {
-    #sobre-ds .content-wrapper {
-        flex-direction: row;
-    }
+
+    #sobre-ds .content-wrapper {
+
+        flex-direction: row;
+
+        align-items: center;
+
+    }
+
+
+
+    #sobre-ds p {
+
+        flex: 1;
+
+    }
+
+
+
+    .media-container {
+
+        flex: 1;
+
+        justify-content: flex-end;
+
+    }
+
+
+
+    #futurista .content-wrapper {
+
+        flex-direction: row;
+
+    }
+
+
+
+    #futurista p {
+
+        flex: 1;
+
+    }
+
+
+
+    #futurista img {
+
+        flex: 1;
+
+    }
+
 }
