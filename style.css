@@ -137,14 +137,14 @@ section:hover {
 
 #futurista p {
     text-align: justify;
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto 2rem;
 }
 
 #futurista img {
     max-width: 100%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 18px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
