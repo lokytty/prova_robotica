@@ -1,110 +1,123 @@
-/* Importa a fonte 'Quicksand' para o corpo do texto e 'Dancing Script' para os títulos */
+/* Importa as fontes 'Quicksand' e 'Dancing Script' */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Dancing+Script:wght@700&display=swap');
 
-/* Estilos globais aplicados a todo o corpo da página */
+/* Estilos Globais */
 body {
-    font-family: 'Quicksand', sans-serif; /* Define a fonte principal fofa */
+    font-family: 'Quicksand', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fce4ec; /* Cor de fundo rosa bebê */
-    color: #4a4a4a; /* Cinza escuro para o texto, garantindo boa leitura */
-    font-size: 18px; /* Aumentei o tamanho da fonte aqui! */
+    background-color: #fce4ec; /* Rosa bebê */
+    color: #4a4a4a; /* Cinza escuro para boa leitura */
+    font-size: 18px;
+    box-sizing: border-box;
 }
 
-/* Estilos para todos os títulos (h1, h2, h3) */
+/* Define a caixa de modelo para todos os elementos */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Container principal para centralizar o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Estilos de Títulos */
 h1, h2, h3 {
-    font-family: 'Dancing Script', cursive; /* Fonte cursiva para um visual único */
-    color: #e91e63; /* Rosa vibrante para os títulos */
+    font-family: 'Dancing Script', cursive;
+    color: #e91e63; /* Rosa vibrante */
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Estilos do cabeçalho */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilos do Cabeçalho */
 header {
-    background-color: #e91e63; /* Cor de fundo rosa vibrante e sólida */
+    background-color: #e91e63;
     color: white;
     padding: 2.5rem 0;
     text-align: center;
-    border-bottom: 5px solid #d81b60; /* Borda escura para separar visualmente */
+    border-bottom: 5px solid #d81b60;
 }
 
-/* Ajuste específico para o título h1 dentro do cabeçalho, garantindo que ele seja branco */
 header h1 {
     color: white;
+    margin: 0;
 }
 
-/* Estilos para o conteúdo principal */
-main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Estilos para cada seção do site para destacar a divisão */
+/* Estilos das Seções */
 section {
-    background-color: #fff; /* Fundo branco para as seções, contrastando com o rosa */
-    margin-bottom: 2rem;
-    padding: 3rem; /* Aumento do padding para dar mais espaço */
-    border-radius: 20px; /* Bordas bem arredondadas, estilo fofo */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra mais forte para destacar a seção */
-    border: 2px solid #f8bbd0; /* Borda rosa suave para contornar a seção */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona uma transição suave */
+    background-color: #fff;
+    margin: 2rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border: 2px solid #f8bbd0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito de hover ao passar o mouse sobre a seção */
 section:hover {
-    transform: translateY(-5px); /* Move a seção um pouco para cima */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Aumenta a sombra */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-/* Estilos para a linha horizontal que divide as seções */
-hr {
+/* Estilo da linha divisória */
+.divider {
     border: none;
-    border-top: 5px dotted #e91e63; /* Linha pontilhada rosa, bem visível */
-    margin: 4rem 0;
+    border-top: 5px dotted #e91e63;
+    width: 50%;
+    margin: 4rem auto;
 }
 
-/* Estilos específicos para a Seção 1 */
+/* Estilos para a Seção 1 (Sobre DS) */
 #sobre-ds .content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
 }
 
-#sobre-ds .content-wrapper p {
+#sobre-ds p {
     text-align: justify;
 }
 
 .media-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
 }
 
 .media-item {
     width: 100%;
-    max-width: 600px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid #f8bbd0; /* Borda rosa para as mídias */
+    border: 2px solid #f8bbd0;
 }
 
-/* Estilos específicos para a Seção 2 (temas de IA) */
-.ia-container {
+/* Estilos para a Seção 2 (Temas de IA) */
+#temas-ia .content-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    text-align: center;
 }
 
 .ia-card {
-    background-color: #fff0f5; /* Rosa mais claro para os cards de IA */
+    background-color: #fff0f5; /* Rosa claro */
     padding: 1.5rem;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 2px solid #f8bbd0;
+    text-align: center;
+}
+
+.ia-card h3 {
+    margin-top: 0;
 }
 
 .ia-card iframe {
@@ -112,65 +125,41 @@ hr {
     aspect-ratio: 16 / 9;
     border-radius: 10px;
     margin-top: 1rem;
+    border: none;
 }
 
-/* Estilos para a Seção 3 (projeto futurista) */
+/* Estilos para a Seção 3 (Projeto Futurista) */
 #futurista .content-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
 }
 
 #futurista p {
     text-align: justify;
-    max-width: 800px; /* Adicionado para deixar o parágrafo mais largo */
-    width: 100%; /* Garantir que a largura máxima seja aplicada */
+    max-width: 800px;
+    margin: 0 auto 2rem;
 }
 
 #futurista img {
-    margin-top: 2rem; /* Espaço entre o parágrafo e a imagem */
     max-width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-/* Estilos do rodapé */
+/* Estilos do Rodapé */
 footer {
-    background-color: #e91e63; /* Cor de fundo igual ao novo cabeçalho para consistência */
+    background-color: #e91e63;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
     margin-top: 2rem;
 }
 
-/* Responsividade: ajusta o layout para telas maiores (a partir de 768px) */
+/* Responsividade para telas maiores */
 @media (min-width: 768px) {
     #sobre-ds .content-wrapper {
         flex-direction: row;
-        align-items: center;
-    }
-
-    #sobre-ds p {
-        flex: 1;
-    }
-
-    .media-container {
-        flex: 1;
-        justify-content: flex-end;
-    }
-
-    #futurista .content-wrapper {
-        flex-direction: column; /* Manter em coluna para o layout de parágrafo e imagem abaixo */
-    }
-
-    #futurista p {
-        flex: auto;
-        max-width: 100%;
-    }
-
-    #futurista img {
-        flex: auto;
     }
 }
